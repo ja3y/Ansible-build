@@ -1,0 +1,16 @@
+---
+#comment
+
+#dictionaries
+name: haris
+occupation: farmer
+age: 34
+
+
+#lists
+food:
+  - rice
+  - beans
+  - garri
+
+foods: ['rice','beans', 'yam']
