@@ -4,15 +4,19 @@
   become: true
   tasks:
 
-  - name: install apache2 package
+  - name: install apache2 and nmap package
     apt:
-      name: apache2
-      state: latest
-  
-  - name: install nmap package
-    apt:
-      name: nmap
+      name: 
+        - apache2
+        - nmap
+        - mariadb-server
+        
       state: latest
     when: ansible_distribution in ["Ubuntu","Debian"]  
   
+  #- name: install nmap package
+   # apt:
+    #  name: nmap
+     # state: latest
+    
   
