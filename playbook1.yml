@@ -4,7 +4,7 @@
   become: true
   tasks:
 
-  - name: install apache2 and nmap package
+  - name: install apache2, nmap package and mariadb
     apt:
       name: 
         - apache2
@@ -18,5 +18,5 @@
    # apt:
     #  name: nmap
      # state: latest
-    
+
   
