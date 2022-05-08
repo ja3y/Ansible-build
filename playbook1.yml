@@ -12,6 +12,7 @@
   - name: install nmap package
     apt:
       name: nmap
-      state: absent
+      state: latest
+    when: ansible_distribution in ["Ubuntu","Debian"]  
   
   
