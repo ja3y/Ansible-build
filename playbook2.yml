@@ -3,5 +3,14 @@
 - hosts: all
   become: true
   tasks:
+
+  #copy files to server using ansible
+  - name: copy html file to Webserver
+    copy: 
+      src: test.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
     
   
