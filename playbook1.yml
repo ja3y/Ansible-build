@@ -19,4 +19,10 @@
     #  name: nmap
      # state: latest
 
-  
+  - name: copy html file to webserver
+    copy: 
+      src: test.html
+      dest: /var/www/html/index.html
+      owner: root
+      group: root
+      mode: 0644
