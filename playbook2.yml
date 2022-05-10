@@ -5,7 +5,7 @@
   tasks:
 
   #copy files to server using ansible
-  - name: copy html file to Webserver
+  - name: copy html file to Webserver main
     copy: 
       src: test.html
       dest: /var/www/html/index.html
