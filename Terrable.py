@@ -5,3 +5,6 @@
 #After copying keys, it executes a ping and install Apache server
 import os
 import subprocess
+
+
+print ("---------Welcome---------")
