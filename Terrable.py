@@ -8,3 +8,5 @@ import subprocess
 
 
 print ("---------Welcome---------")
+terrainstall = (os.system("sudo apt-get install terraform"))
+ansinstall = (os.system("sudo apt-get install ansible"))
