@@ -8,5 +8,10 @@ import subprocess
 
 
 print ("---------Welcome---------")
+#check if os == debian or ubuntu | then install terraform and ansible
 terrainstall = (os.system("sudo apt-get install terraform"))
 ansinstall = (os.system("sudo apt-get install ansible"))
+
+checkansiversion =  (os.system("ansible -v"))
+checkterraversion = (os.system("terraform -v"))
+
