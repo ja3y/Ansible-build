@@ -12,11 +12,18 @@ print ("---------Welcome---------")
 #terrainstall = (os.system("sudo apt-get install terraform"))
 #ansinstall = (os.system("sudo apt-get install ansible"))
 
-checkansiversion =  (os.system("ansible --version >> ansiblecheck.txt"))
-checkterraversion = (os.system("terraform -v >>terraformcheck.txt"))
-chanv = open("ansiblecheck.txt", 'r')
-chante = open("terraformcheck.txt", 'r')
-if str("ansible [core 2.12.4]") in chanv: ##check for readlines command in python
-    print (chanv)
-elif str("Terraform") in chante:
-    print ("[+] Terraform is not installed")
+checkansiversion =  (os.system("ansible --version > ansiblecheck.txt"))
+checkterraversion = (os.system("terraform -v > terraformcheck.txt"))
+
+with open('ansiblecheck.txt') as chanv :
+    chanvlines = chanv.readlines()
+with open('terraformcheck.txt') as chter :
+    chterlines = chter.readlines()
+for lines in chanvlines:
+
+    if str("ansible") in lines: ##check for readlines command in python
+        print ("[+] Ansible Is Installed on Host")
+    else:
+        print ("[+] Ansible is not installed, install Ansible with the command 'sudo apt-get install ansible'")
+    if str("Terraform") in lines:
+        print ("[+] Terraform is not installed") ##check why Terraf
