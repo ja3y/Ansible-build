@@ -15,3 +15,7 @@ ansinstall = (os.system("sudo apt-get install ansible"))
 checkansiversion =  (os.system("ansible -v"))
 checkterraversion = (os.system("terraform -v"))
 
+if checkansiversion != str(""):
+    print ("[+] Ansible is not installed")
+elif checkterraversion != str(""):
+    print 
