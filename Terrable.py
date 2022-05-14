@@ -12,10 +12,10 @@ print ("---------Welcome---------")
 terrainstall = (os.system("sudo apt-get install terraform"))
 ansinstall = (os.system("sudo apt-get install ansible"))
 
-checkansiversion =  (os.system("ansible -v"))
-checkterraversion = (os.system("terraform -v"))
-
-if checkansiversion != str(""):
+checkansiversion =  (os.system("ansible --version >> ansiblecheck.txt"))
+checkterraversion = (os.system("terraform -v >>terraformcheck.txt"))
+chanv = open("ansiblecheck.txt, 'r")
+if chanv != str(""): ##check for readlines command in python
     print ("[+] Ansible is not installed")
 elif checkterraversion != str(""):
     print ("[+] Terraform is not installed")
