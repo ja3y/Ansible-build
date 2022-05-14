@@ -9,13 +9,14 @@ import subprocess
 
 print ("---------Welcome---------")
 #check if os == debian or ubuntu | then install terraform and ansible
-terrainstall = (os.system("sudo apt-get install terraform"))
-ansinstall = (os.system("sudo apt-get install ansible"))
+#terrainstall = (os.system("sudo apt-get install terraform"))
+#ansinstall = (os.system("sudo apt-get install ansible"))
 
 checkansiversion =  (os.system("ansible --version >> ansiblecheck.txt"))
 checkterraversion = (os.system("terraform -v >>terraformcheck.txt"))
-chanv = open("ansiblecheck.txt, 'r")
-if chanv != str(""): ##check for readlines command in python
-    print ("[+] Ansible is not installed")
-elif checkterraversion != str(""):
+chanv = open("ansiblecheck.txt", 'r')
+chante = open("terraformcheck.txt", 'r')
+if str("ansible [core 2.12.4]") in chanv: ##check for readlines command in python
+    print (chanv)
+elif str("Terraform") in chante:
     print ("[+] Terraform is not installed")
