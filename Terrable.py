@@ -18,4 +18,4 @@ checkterraversion = (os.system("terraform -v"))
 if checkansiversion != str(""):
     print ("[+] Ansible is not installed")
 elif checkterraversion != str(""):
-    print 
+    print ("[+] Terraform is not installed")
