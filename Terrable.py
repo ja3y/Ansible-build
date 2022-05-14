@@ -16,14 +16,14 @@ checkansiversion =  (os.system("ansible --version > ansiblecheck.txt"))
 checkterraversion = (os.system("terraform -v > terraformcheck.txt"))
 
 with open('ansiblecheck.txt') as chanv :
-    chanvlines = chanv.readlines()
+    chanvlines = chanv.read()
 with open('terraformcheck.txt') as chter :
-    chterlines = chter.readlines()
-for lines in chanvlines:
+    chterlines = chter.read()
+for line in chanvlines:
 
-    if str("ansible") in lines: ##check for readlines command in python
+    if str("ansible [core 2.12.4]") in line: ##check for readlines command in python
         print ("[+] Ansible Is Installed on Host")
     else:
         print ("[+] Ansible is not installed, install Ansible with the command 'sudo apt-get install ansible'")
-    if str("Terraform") in lines:
-        print ("[+] Terraform is not installed") ##check why Terraf
+    if str("Terraform") in line:
+        print ("[+] Terraform is installed") ##check why Terraf
