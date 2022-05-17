@@ -34,6 +34,7 @@ for line in chanvlines and  chterlines:
 def terracall():
     os.system("terraform init")
 
-print ("-----staging----")#delete this
+print ("-----staging----")
+print ("maintain")#delete this
 
 terracall()
