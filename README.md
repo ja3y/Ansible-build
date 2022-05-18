@@ -6,4 +6,4 @@ This covers my ansible journey
 - deploy ansible
 - write playbooks
 - integrate with gitlab
-
+- Terrable.py
