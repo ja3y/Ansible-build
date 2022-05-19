@@ -6,7 +6,9 @@
   
   - name: install htop
     apt: 
-      name: htop
+      name: 
+        - htop
+        - nginx
       state: latest
       update_cache: yes
 
